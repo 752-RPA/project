@@ -297,7 +297,7 @@
                             <InArgument x:TypeArguments="x:Int32">[count + 1]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[count = 5]" sap:VirtualizedContainerService.HintSize="487,300" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[count = 2]" sap:VirtualizedContainerService.HintSize="487,300" sap2010:WorkflowViewState.IdRef="If_1">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
