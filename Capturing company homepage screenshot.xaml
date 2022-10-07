@@ -105,13 +105,13 @@
           <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1006.66666666667,1235.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[NZXData.xlsx]">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1006.66666666667,1197.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[NZXData.xlsx]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="972.666666666667,1126.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="972.666666666667,1088.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -122,29 +122,29 @@
                   <OutArgument x:TypeArguments="x:String">[companyWebsite]</OutArgument>
                 </ui:ExcelReadCell.Result>
               </ui:ExcelReadCell>
-              <If Condition="[companyWebsite &lt;&gt; &quot;&quot; OR companyWebsite &lt;&gt;&quot;unavailable&quot;]" sap:VirtualizedContainerService.HintSize="930.666666666667,936" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[companyWebsite &lt;&gt; &quot;&quot; OR companyWebsite &lt;&gt;&quot;unavailable&quot;]" sap:VirtualizedContainerService.HintSize="930.666666666667,898" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="508.666666666667,775.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence sap:VirtualizedContainerService.HintSize="508.666666666667,737.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.666666666667,494.666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[companyWebsite]">
+                    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.666666666667,456.666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[companyWebsite]">
                       <ui:OpenBrowser.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,392" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,354" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:TakeScreenshot DisplayName="Take Screenshot 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[companyHomepageScreenshot]" WaitBefore="300">
+                            <ui:TakeScreenshot DisplayName="Take Screenshot 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[companyHomepageScreenshot]" WaitBefore="300">
                               <ui:TakeScreenshot.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c80c94e0-7a7a-4fc1-a105-ded0f3811b50" InformativeScreenshot="3d6eacb5764074df6dfb804a69fafb2f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Google - Google Chrome' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c80c94e0-7a7a-4fc1-a105-ded0f3811b50" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Google - Google Chrome' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
                                   <ui:Target.TimeoutMS>
                                     <InArgument x:TypeArguments="x:Int32" />
                                   </ui:Target.TimeoutMS>
