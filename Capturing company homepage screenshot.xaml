@@ -39,6 +39,7 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>BalaReva.Excel.Sheets</x:String>
       <x:String>BalaReva.Excel.Base</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -121,7 +122,7 @@
                   <OutArgument x:TypeArguments="x:String">[companyWebsite]</OutArgument>
                 </ui:ExcelReadCell.Result>
               </ui:ExcelReadCell>
-              <If Condition="[companyWebsite &lt;&gt; &quot;&quot; OR &quot;unavailable&quot;]" sap:VirtualizedContainerService.HintSize="930.666666666667,936" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[companyWebsite &lt;&gt; &quot;&quot; OR companyWebsite &lt;&gt;&quot;unavailable&quot;]" sap:VirtualizedContainerService.HintSize="930.666666666667,936" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Sequence sap:VirtualizedContainerService.HintSize="508.666666666667,775.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
