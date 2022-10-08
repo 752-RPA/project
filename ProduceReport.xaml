@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1202,2827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1202,2589</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProduceReport_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -83,14 +83,10 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProduceReport" sap:VirtualizedContainerService.HintSize="644,2762" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProduceReport" sap:VirtualizedContainerService.HintSize="644,2524" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="Index" />
-      <Variable x:TypeArguments="s:String[]" Name="PageArray">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="Directory.GetFiles(&quot;pages&quot;, &quot;*.pdf&quot;)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="s:String[]" Default="[Directory.GetFiles(&quot;pages&quot;, &quot;*.pdf&quot;)]" Name="PageArray" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -144,7 +140,5 @@
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="602,79" sap2010:WorkflowViewState.IdRef="Delete_2" Path="pages" />
-    <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="602,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="pages" />
   </Sequence>
 </Activity>
