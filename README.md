@@ -5,6 +5,9 @@
 3. Set number of companies you wish to extract data from. Variable is in `Main.xaml`
 
     ![image](https://user-images.githubusercontent.com/64149662/195966689-d9ae387f-e803-4037-9f5a-d77c7896562c.png)
+   
+4. In UIPath Select "Run"
 
-4. Data extracted from NZX is stored in `NZXData.xlsx`
-5. Report of companies is stored in FInal `Report.pdf`
+## Results
+5. Data extracted from NZX is stored in `NZXData.xlsx`
+6. Report of companies is stored in FInal `Report.pdf`
