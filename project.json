@@ -3,6 +3,7 @@
   "description": "NZX Company Market Scraper",
   "main": "Main.xaml",
   "dependencies": {
+    "BalaReva.Excel.Activities": "[2021.0.0]",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.Mail.Activities": "[1.9.5]",
     "UiPath.PDF.Activities": "[3.6.0]",
