@@ -5,8 +5,10 @@
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.Mail.Activities": "[1.9.5]",
+    "UiPath.PDF.Activities": "[3.6.0]",
     "UiPath.System.Activities": "[20.10.4]",
-    "UiPath.UIAutomation.Activities": "[20.10.9]"
+    "UiPath.UIAutomation.Activities": "[20.10.9]",
+    "UiPath.Word.Activities": "[1.13.0]"
   },
   "webServices": [],
   "entitiesStores": [],
