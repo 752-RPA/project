@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetCompanyInfo" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="ImportDtCompanies" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="NumberOfCompaniesToGet" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1522,3590</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1522,3736</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetCompanyInfo_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="29">
@@ -73,56 +74,52 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetCompanyInfo" sap:VirtualizedContainerService.HintSize="781,3525" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetCompanyInfo" sap:VirtualizedContainerService.HintSize="778,3671" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CEO" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="739,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Media Contact" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="739,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Auditor" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="739,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Solicitor" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="739,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CFO" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="739,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5" />
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Website" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="739,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="739,3061" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Url="https://www.nzx.com/">
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CEO" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="736,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Media Contact" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="736,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Auditor" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="736,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Solicitor" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="736,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="CFO" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="736,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_5" />
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Website" DataTable="[ImportDtCompanies]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="736,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_6" />
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="736,3061" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Url="https://www.nzx.com/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="705,2960" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence sap:VirtualizedContainerService.HintSize="702,2960" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap:VirtualizedContainerService.HintSize="663,2868" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence sap:VirtualizedContainerService.HintSize="660,2868" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="621,2776" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="618,2776" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
-                  <Variable x:TypeArguments="x:Int32" Name="count">
-                    <Variable.Default>
-                      <Literal x:TypeArguments="x:Int32" />
-                    </Variable.Default>
-                  </Variable>
+                  <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ImportDtCompanies]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="579,2684" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ImportDtCompanies]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576,2684" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="529,2537" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,2537" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="dtCompanySoliAudi" />
                           <Variable x:TypeArguments="x:String" Name="Solicitor" />
@@ -139,8 +136,8 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="487,59" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[&quot;https://www.nzx.com/&quot; +row.Item(&quot;NzxCompanyUrl&quot;).ToString()]" />
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanySoliAudi]" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="487,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
+                        <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[&quot;https://www.nzx.com/&quot; +row.Item(&quot;NzxCompanyUrl&quot;).ToString()]" />
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanySoliAudi]" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c2fb0fc-75d4-444f-a5e1-9a24a7f45c29" InformativeScreenshot="6aa895e59327a791163baeefcc43061f" Selector="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;table' idx='2' tag='TABLE' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -149,12 +146,12 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtCompanySoliAudi]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="487,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnIndex="[0]" LookupValue="Solicitor" TargetColumnIndex="[1]">
+                        <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtCompanySoliAudi]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnIndex="[0]" LookupValue="Solicitor" TargetColumnIndex="[1]">
                           <ui:LookupDataTable.CellValue>
                             <OutArgument x:TypeArguments="x:String">[Solicitor]</OutArgument>
                           </ui:LookupDataTable.CellValue>
                         </ui:LookupDataTable>
-                        <Assign sap:VirtualizedContainerService.HintSize="487,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Object">[row.Item("Solicitor")]</OutArgument>
                           </Assign.To>
@@ -162,12 +159,12 @@
                             <InArgument x:TypeArguments="x:Object">[Solicitor]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtCompanySoliAudi]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="487,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnIndex="[0]" LookupValue="Auditor" TargetColumnIndex="[1]">
+                        <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtCompanySoliAudi]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnIndex="[0]" LookupValue="Auditor" TargetColumnIndex="[1]">
                           <ui:LookupDataTable.CellValue>
                             <OutArgument x:TypeArguments="x:String">[Auditor]</OutArgument>
                           </ui:LookupDataTable.CellValue>
                         </ui:LookupDataTable>
-                        <Assign sap:VirtualizedContainerService.HintSize="487,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Object">[row.Item("Auditor")]</OutArgument>
                           </Assign.To>
@@ -175,7 +172,7 @@
                             <InArgument x:TypeArguments="x:Object">[Auditor]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanyExecs]" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="487,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanyExecs]" DisplayName="Extract Structured Data 'TABLE'" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest' /&gt;" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53251168-11ff-423a-8bdd-a413caeb7925" InformativeScreenshot="2e55878ee061d05260e0abf3b3ce3ac3" Selector="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;table' idx='1' tag='TABLE' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -184,7 +181,7 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="487,379" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484,379" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                           <TryCatch.Try>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_8">
                               <sap:WorkflowViewStateService.ViewState>
@@ -218,7 +215,7 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="487,379" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484,379" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <TryCatch.Try>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_9">
                               <Sequence.Variables>
@@ -255,7 +252,7 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanyContact]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;    &lt;column exact=&quot;1&quot; name=&quot;Column1&quot; attr=&quot;text&quot; name2=&quot;Column2&quot; attr2=&quot;href&quot;&gt;        &lt;webctrl tag=&quot;address&quot; idx=&quot;1&quot;/&gt;        &lt;webctrl tag=&quot;span&quot;/&gt;        &lt;webctrl tag=&quot;a&quot;/&gt;    &lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="487,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" SimulateClick="True">
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanyContact]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;    &lt;column exact=&quot;1&quot; name=&quot;Column1&quot; attr=&quot;text&quot; name2=&quot;Column2&quot; attr2=&quot;href&quot;&gt;        &lt;webctrl tag=&quot;address&quot; idx=&quot;1&quot;/&gt;        &lt;webctrl tag=&quot;span&quot;/&gt;        &lt;webctrl tag=&quot;a&quot;/&gt;    &lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="100" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a236de12-a2d3-4da8-b6b3-6a152d8aabd0" InformativeScreenshot="64f5cb9393c0cc55f883b467b7cd3a40" Selector="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -264,7 +261,7 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <Assign sap:VirtualizedContainerService.HintSize="487,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Object">[row.Item("Website")]</OutArgument>
                           </Assign.To>
@@ -272,7 +269,7 @@
                             <InArgument x:TypeArguments="x:String">[dtCompanyContact.Rows(0).Item(1).ToString()]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanyMedia]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='address' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="487,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100" SimulateClick="True">
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[dtCompanyMedia]" DisplayName="Extract Structured Data 'DIV'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='address' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="185fcbe3-c116-41b7-a16e-ce7943a9d4e6" InformativeScreenshot="f5e4a7db931ff6bc106b5ace24e84020" Selector="&lt;webctrl css-selector='body&amp;gt;section&amp;gt;div&amp;gt;aside&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -281,7 +278,7 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <Assign sap:VirtualizedContainerService.HintSize="487,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Object">[row.Item("Media Contact")]</OutArgument>
                           </Assign.To>
@@ -289,7 +286,7 @@
                             <InArgument x:TypeArguments="x:String">[dtCompanyMedia.Rows(0).Item(0).ToString().Replace("Contact", "").Replace(vbCrLf, ", ")]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="487,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
                           </Assign.To>
@@ -297,7 +294,7 @@
                             <InArgument x:TypeArguments="x:Int32">[count + 1]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[count = 2]" sap:VirtualizedContainerService.HintSize="487,300" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[count = NumberOfCompaniesToGet]" sap:VirtualizedContainerService.HintSize="484,300" sap2010:WorkflowViewState.IdRef="If_1">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
@@ -328,5 +325,17 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
+    <ui:CloseApplication DisplayName="Close Application 'msedge.exe NZX,'" sap:VirtualizedContainerService.HintSize="736,106" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+      <ui:CloseApplication.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="80d5a5bd-32d8-42fc-aabe-732ea3407b8c" InformativeScreenshot="b301753055462235bdb432f9361f9e42" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:CloseApplication.Target>
+    </ui:CloseApplication>
   </Sequence>
 </Activity>
