@@ -23,7 +23,10 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
-    "excludedLoggedData": ["Private:*", "*password*"],
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
