@@ -1,10 +1,20 @@
 # Project 7
-(Description of project can go here)
+When advising clients on market risk, we often need to check multiple organisations for their details. However, sometimes the information is missing or incorrect. Therefore, we want a way to easily check a stock market [(the NZX in New Zealand)](https://www.nzx.com/) and find out which company details are available or missing.
+For each company on the [Main board market](https://www.nzx.com/markets/NZSX) we gathered data on the follwing:
+* Chief Executive officer
+* Media contact information
+* Auditor
+* Solicitor
+* Chief Finacial officer
+* Website 
+* Screenshot of the website homepage
+
+This data was then input into a Excel spreadsheet and a PDF report was created to summarise the data.
 
 ## Quick Start Guide
 
-1.  Download UIPath Extension for MicroSoft Edge
-2.  Make sure all Microsoft Edge Browsers are closed
+1.  Download UIPath Extension for **Microsoft Edge**
+2.  Make sure all Microsoft Edge Browsers are **closed**
 3.  Set number of companies you wish to extract data from. Variable is in `Main.xaml`.
 
     **MINIMUM VALUE: 2**
