@@ -1,4 +1,5 @@
 # Project 7
+(Description of project can go here)
 
 ## Quick Start Guide
 
@@ -11,8 +12,9 @@
     ![image](https://user-images.githubusercontent.com/64149662/195966689-d9ae387f-e803-4037-9f5a-d77c7896562c.png)
 
 4.  In UIPath Select "Run"
+5.  Wait for the application to finish running. **This process can take a very long time! Do not manually close anything opened untill its finished.**
 
 ## Results
 
-5. Data extracted from NZX is stored in `NZXData.xlsx`
-6. Report of companies is stored in `Final Report.pdf`
+6. Data extracted from NZX is stored in `NZXData.xlsx`
+7. Report of companies can be found in `Final Report.pdf`
