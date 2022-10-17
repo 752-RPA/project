@@ -29,4 +29,6 @@ This data was then input into a Excel spreadsheet and a PDF report was created t
 6. Data extracted from NZX is stored in `NZXData.xlsx`
 7. Report of companies can be found in `Final Report.pdf`
 
+## Github Link:
+https://github.com/752-RPA/project
 
