@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1202,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1522,941</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Capturing_company_homepage_screenshot_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,16 +105,16 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,103.666666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Size x:Key="ShapeSize">200,123</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1140,2253" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="NZXData.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Bot opens Excel template in order to paste screenshot of the company website homepage." DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1140,2830" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="NZXData.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="1106,2144" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence sap:VirtualizedContainerService.HintSize="1106,2690" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
               </Sequence.Variables>
@@ -123,15 +123,27 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Screenshots" DataTable="[CompanyData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="1064,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-              <ui:ExcelWriteCell Cell="I1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1064,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1" Text="Screenshots" />
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[CompanyData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1064,1863" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="Bot adds &quot;Screenshots&quot; Data Column in order to show the screenshot of the company website homepage." ColumnName="Screenshots" DataTable="[CompanyData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="1064,94" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:AddDataColumn>
+              <ui:ExcelWriteCell sap2010:Annotation.AnnotationText="Bot inputs the screenshot as the &quot;value&quot; into the Excel template." Cell="I1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1064,129" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1" Text="Screenshots">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ExcelWriteCell>
+              <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Bot adds a screenshot of the company website homepage for each company in the &quot;CompanyData&quot; DataTable." DataTable="[CompanyData]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1064,2295" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1014,1716" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1014,2117" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="Screenshots" />
                       </Sequence.Variables>
@@ -140,12 +152,18 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[count = NumberOfCompaniesToGet]" sap:VirtualizedContainerService.HintSize="972,300" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If sap2010:Annotation.AnnotationText="Bot collects homepage screenshots of number of companies in specifed by NumberOfCompaniesToGet." Condition="[count = NumberOfCompaniesToGet]" sap:VirtualizedContainerService.HintSize="972,414" sap2010:WorkflowViewState.IdRef="If_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <Sequence sap2010:Annotation.AnnotationText="Bot stops collecting homepage screenshots after number of companies specifed has been collected." sap:VirtualizedContainerService.HintSize="242,186" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:Break sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1" />
@@ -161,38 +179,48 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:ExcelReadCell Cell="[&quot;H&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="972,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="Sheet1">
+                      <ui:ExcelReadCell sap2010:Annotation.AnnotationText="Bot reads company homepage URL from excel" Cell="[&quot;H&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString]" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="972,90" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="Sheet1">
                         <ui:ExcelReadCell.Result>
                           <OutArgument x:TypeArguments="x:String">[companyWebsite]</OutArgument>
                         </ui:ExcelReadCell.Result>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </ui:ExcelReadCell>
-                      <If Condition="[companyWebsite &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="972,1085" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If sap2010:Annotation.AnnotationText="If the company website is available for screenshot, then the bot will open browser in order to find company homepage. If company website is not available, then bot lists &quot;Screenshots&quot;as &quot;unavailable&quot;." Condition="[companyWebsite &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="972,1341" sap2010:WorkflowViewState.IdRef="If_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="551,928" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence sap:VirtualizedContainerService.HintSize="551,1142" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap:VirtualizedContainerService.HintSize="509,836" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <Sequence sap:VirtualizedContainerService.HintSize="509,1050" sap2010:WorkflowViewState.IdRef="Sequence_14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,455" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[companyWebsite]">
+                              <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Bot opens browser in order to find company website homepage." BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,585" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[companyWebsite]">
                                 <ui:OpenBrowser.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,354" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,453" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:TakeScreenshot DisplayName="Take Screenshot 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[companyHomepageScreenshot]" WaitBefore="3000">
+                                      <ui:TakeScreenshot sap2010:Annotation.AnnotationText="Bot takes screenshot of company homepage using &quot;Intermediate D3D Window&quot;." DisplayName="Take Screenshot 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="334,110" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[companyHomepageScreenshot]" WaitBefore="3000">
                                         <ui:TakeScreenshot.Target>
                                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c80c94e0-7a7a-4fc1-a105-ded0f3811b50" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' omit:title='Google - Profile 1 - Microsoft​ Edge' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
                                             <ui:Target.TimeoutMS>
@@ -203,41 +231,79 @@
                                             </ui:Target.WaitForReady>
                                           </ui:Target>
                                         </ui:TakeScreenshot.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                       </ui:TakeScreenshot>
-                                      <ui:SaveImage DisplayName="Save Image" FileName="[&quot;companyScreenshots\&quot; + &quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString + &quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[companyHomepageScreenshot]" />
+                                      <ui:SaveImage sap2010:Annotation.AnnotationText="Bot saves the screenshot of the company homepage under the file &quot;companyScreenshots.png&quot;, and closes the tab of that particular company homepage." DisplayName="Save Image" FileName="[&quot;companyScreenshots\&quot; + &quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString + &quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="334,149" sap2010:WorkflowViewState.IdRef="SaveImage_2" Image="[companyHomepageScreenshot]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:SaveImage>
                                       <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
                                     </Sequence>
                                   </ActivityAction>
                                 </ui:OpenBrowser.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
                               </ui:OpenBrowser>
-                              <ui:ExcelWriteCell Cell="[&quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="467,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Sheet1" Text="[&quot;companyScreenshots\&quot; + &quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString + &quot;.png&quot;]" />
+                              <ui:ExcelWriteCell sap2010:Annotation.AnnotationText="Bot pastes the &quot;companyScreenshots.png&quot; in &quot;Sheet1&quot; under the row &quot;Screenshots&quot;." Cell="[&quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="467,129" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Sheet1" Text="[&quot;companyScreenshots\&quot; + &quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString + &quot;.png&quot;]">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:ExcelWriteCell>
                               <ui:ExcelSaveWorkbook DisplayName="Save Workbook" sap:VirtualizedContainerService.HintSize="467,22" sap2010:WorkflowViewState.IdRef="ExcelSaveWorkbook_2" />
-                              <Assign sap:VirtualizedContainerService.HintSize="467,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                              <Assign sap2010:Annotation.AnnotationText="Bot adds screenshot to company datatable" sap:VirtualizedContainerService.HintSize="467,102" sap2010:WorkflowViewState.IdRef="Assign_6">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[row.Item("Screenshots")]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
                                   <InArgument x:TypeArguments="x:String">["companyScreenshots\" + "I" +(CompanyData.Rows.IndexOf(row)+2).ToString + ".png"]</InArgument>
                                 </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
                               </Assign>
                             </Sequence>
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,363" sap2010:WorkflowViewState.IdRef="Sequence_5">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ExcelWriteCell Cell="[&quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="unavailable" />
-                            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <ui:ExcelWriteCell sap2010:Annotation.AnnotationText="Bot lists the &quot;Screenshots&quot;as &quot;unavailable&quot; in &quot;Sheet1&quot; for the specific company." Cell="[&quot;I&quot; + (CompanyData.Rows.IndexOf(row)+2).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="unavailable">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ExcelWriteCell>
+                            <Assign sap2010:Annotation.AnnotationText="Bot adds unavailable to company datatable" sap:VirtualizedContainerService.HintSize="334,102" sap2010:WorkflowViewState.IdRef="Assign_5">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Object">[row.Item("Screenshots")]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
                                 <InArgument x:TypeArguments="x:Object">["unavailable"]</InArgument>
                               </Assign.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
                             </Assign>
                           </Sequence>
                         </If.Else>
@@ -256,6 +322,7 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
@@ -265,6 +332,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
