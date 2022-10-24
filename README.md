@@ -24,6 +24,8 @@ This data was then input into a Excel spreadsheet and a PDF report was created t
 4.  In UIPath Select "Run"
 5.  Wait for the application to finish running. **This process can take a very long time! Do not manually close anything opened untill its finished.**
 
+**NOTE:** If an error occurs at "Source: Add Picture" this may be due to Add-In installed on Word, such as Grammarly.
+
 ## Results
 
 6. Data extracted from NZX is stored in `NZXData.xlsx`
